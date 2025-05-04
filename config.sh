@@ -169,7 +169,7 @@ sed -i 's/^ZSH_THEME=.*/ZSH_THEME="powerlevel10k\/powerlevel10k"/' ~/.zshrc
 sed -i 's/^plugins=.*/plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf k)/' ~/.zshrc
 
 # Adicionar alias para o VSCode instalado via Flatpak
-echo "alias code='flatpak run com.visualstudio.code'" >> ~/.zshrc
+echo "alias code='/usr/bin/code'" >> ~/.zshrc
 
 # Configurar o terminal integrado do VSCode
 echo "🛠️ Configurando o terminal integrado do VSCode..."
@@ -190,6 +190,8 @@ cat <<EOL > ~/.config/Code/User/settings.json
     "terminal.integrated.enableMultiLinePasteWarning": "auto"
 }
 EOL
+
+source ~/.zshrc
 
 echo "✅ Instalação e configuração concluídas com sucesso!"
 echo "🔁 Por favor, reinicie o sistema ou faça logout/login para aplicar todas as alterações."
